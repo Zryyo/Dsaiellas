@@ -1,0 +1,13 @@
+{
+  "run_id": "agent-qwen25-coder-7b-v1",
+  "total_iterations": 2,
+  "total_tokens_in": 17881,
+  "total_tokens_out": 2549,
+  "total_tokens": 20430,
+  "total_wall_clock_sec": 184.89999999999998,
+  "best_valid_primary": 0.6027777194976807,
+  "best_observed_valid_primary": 0.6027777194976807,
+  "baseline_test_primary": 0.5946,
+  "final_delta_over_baseline": 0.002150259399414045,
+  "manual_interventions": 0
+}

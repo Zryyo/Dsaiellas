@@ -1,0 +1,7 @@
+# Gemma 4 LoRA/QLoRA training on Apple silicon.
+# Kept separate from the benchmark harness dependencies because this stack is
+# only needed when building or serving a fine-tuned local agent.
+mlx-vlm[train]>=0.5.0
+# Required at runtime by Gemma 4's Transformers chat template but not pulled
+# in by mlx-vlm 0.6.17's training extra.
+jinja2>=3.1

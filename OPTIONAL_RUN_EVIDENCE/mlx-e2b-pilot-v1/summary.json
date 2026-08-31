@@ -1,0 +1,13 @@
+{
+  "run_id": "mlx-e2b-pilot-v1",
+  "total_iterations": 2,
+  "total_tokens_in": 20475,
+  "total_tokens_out": 1980,
+  "total_tokens": 22455,
+  "total_wall_clock_sec": 97.1,
+  "best_valid_primary": 0.6027777194976807,
+  "best_observed_valid_primary": 0.6027777194976807,
+  "baseline_test_primary": 0.5946,
+  "final_delta_over_baseline": 0.002150259399414045,
+  "manual_interventions": 0
+}

@@ -1,0 +1,31 @@
+# Dataset (download separately, see README)
+KuaiRand-Pure/
+KuaiRand-Pure.tar.gz
+
+# Generated submission artifacts are uploaded separately through Devpost
+submission/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local fine-tuning caches and adapters (large/reproducible artifacts)
+.hf-cache/
+finetune-output/
+finetune-data-gemma/
+
+# Curated transfer bundle for creating a separate public repository
+submission-file-groups/
+
+# Secrets
+.env
+
+# Agent run workspaces: scratch copies of the pipeline used for sandboxed
+# evaluation, not part of the deliverable. iterations.jsonl and summary.json
+# in the same run directories ARE the deliverable and must stay tracked.
+runs/*/workspace/
+
+# Local tool/session state, not part of the project
+.claude/
+.DS_Store

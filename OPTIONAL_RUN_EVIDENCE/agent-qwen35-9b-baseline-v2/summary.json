@@ -1,0 +1,13 @@
+{
+  "run_id": "agent-qwen35-9b-baseline-v2",
+  "total_iterations": 4,
+  "total_tokens_in": 25576,
+  "total_tokens_out": 4105,
+  "total_tokens": 29681,
+  "total_wall_clock_sec": 379.7,
+  "best_valid_primary": 0.6014402508735657,
+  "best_observed_valid_primary": 0.6014402508735657,
+  "baseline_test_primary": 0.5946,
+  "final_delta_over_baseline": 0.0003730277061462228,
+  "manual_interventions": 0
+}
