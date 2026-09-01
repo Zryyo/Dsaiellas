@@ -1,0 +1,64 @@
+{
+  "generated_at_utc": "2026-08-31T19:39:05.196725+00:00",
+  "source_run": "agent-openai-v3",
+  "source_iteration": 2,
+  "source_iteration_kept": true,
+  "source_multiseed_metrics": {
+    "valid": {
+      "GAUC": {
+        "mean": 0.6687620878219604,
+        "std": 0.00026894113450887406
+      },
+      "nDCG@5": {
+        "mean": 0.5367932915687561,
+        "std": 0.00018727353184441788
+      },
+      "primary": {
+        "mean": 0.6027777194976807,
+        "std": 0.0002279997795100849
+      }
+    },
+    "test": {
+      "GAUC": {
+        "mean": 0.6630944013595581,
+        "std": 9.338118928364478e-05
+      },
+      "nDCG@5": {
+        "mean": 0.53040611743927,
+        "std": 0.00021946556653110844
+      },
+      "primary": {
+        "mean": 0.5967502593994141,
+        "std": 0.00012231024151886292
+      }
+    }
+  },
+  "config": {
+    "k": 16,
+    "lr": 0.001,
+    "epochs": 40,
+    "bs": 8192,
+    "patience": 4,
+    "loss": "pairwise",
+    "feature_fn": "base",
+    "sampler": "user"
+  },
+  "seed": 0,
+  "single_checkpoint_validation_metrics": {
+    "GAUC": 0.6689072847366333,
+    "nDCG@5": 0.5368795990943909,
+    "primary": 0.6028934717178345,
+    "users": 22377.0,
+    "rows": 124909.0
+  },
+  "submission": {
+    "path": "submission/kuairand_pure_submission.csv",
+    "rows": 170588,
+    "sha256": "dc6e0f5e1ac71e80cdedd602920f05f7851aa36070ae78c14917c155571d96d0",
+    "schema": "row_id,user_id,video_id,score"
+  },
+  "checkpoint": {
+    "path": "submission/kuairand_pure_fm_seed0.npz",
+    "sha256": "415181e16824544d908e106b8a2f615d3be5dfc0734d905e958039b618e2d334"
+  }
+}

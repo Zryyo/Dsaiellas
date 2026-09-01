@@ -2,9 +2,6 @@
 KuaiRand-Pure/
 KuaiRand-Pure.tar.gz
 
-# Generated submission artifacts are uploaded separately through Devpost
-submission/
-
 # Python
 __pycache__/
 *.pyc

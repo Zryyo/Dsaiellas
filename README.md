@@ -16,6 +16,21 @@ python3 make_final_submission.py
 python3 submit.py submission/kuairand_pure_submission.csv --check
 ```
 
+## Final submission artifacts
+
+The repository includes the required final output and its reproducibility
+evidence:
+
+| File | Purpose |
+|---|---|
+| [`submission/kuairand_pure_submission.csv`](submission/kuairand_pure_submission.csv) | Final predictions in the required `row_id,user_id,video_id,score` schema |
+| [`submission/kuairand_pure_fm_seed0.npz`](submission/kuairand_pure_fm_seed0.npz) | Validation-best NumPy FM checkpoint |
+| [`submission/submission_manifest.json`](submission/submission_manifest.json) | Configuration, provenance, validation metrics, and SHA-256 hashes |
+| [`submission/RESULTS_AND_RESOURCES.md`](submission/RESULTS_AND_RESOURCES.md) | Baseline deltas, convergence, token usage, wall-clock time, and interventions |
+
+The dataset remains excluded because it is downloaded separately. Running the
+commands above regenerates and validates these artifacts locally.
+
 ## Project overview
 
 - **Task**: KuaiRand-Pure within-user ranking over logged impressions, using
