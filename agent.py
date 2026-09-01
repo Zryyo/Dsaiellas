@@ -952,7 +952,7 @@ CURRENT TARGET SOURCE:
         # --- real apply + evaluate path: all changed files together, one
         # evaluation, revert all together on failure or non-improvement ---
         snapshot = self._read_files()   # == self.best_files, re-read to be safe
-        # A local Ollama model can occupy most unified memory on a laptop.
+        # A local Ollama model can occupy most available accelerator memory.
         # Release its weights before the FM subprocess starts; the daemon stays
         # running and the next proposal call reloads the model automatically.
         if not llm.release(self.model, self.provider):

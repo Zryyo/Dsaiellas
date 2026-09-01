@@ -1,4 +1,4 @@
-"""Run a conservative Gemma 4 E2B QLoRA smoke test or pilot on Apple silicon."""
+"""Run a conservative Gemma 4 E2B QLoRA smoke test or pilot."""
 import argparse
 import copy
 import json

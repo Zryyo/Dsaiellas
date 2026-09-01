@@ -107,9 +107,8 @@ def _propose_ollama(prompt, model):
     """
     base_url = os.environ.get('OLLAMA_BASE_URL', 'http://127.0.0.1:11434').rstrip('/')
     try:
-        # These defaults fit the full project prompt while leaving headroom
-        # for a 24B Q4 model on a 24 GB unified-memory laptop. Increase them
-        # only on a machine with more memory.
+        # These conservative defaults fit the full project prompt while
+        # retaining headroom for evaluation on memory-constrained machines.
         num_ctx = int(os.environ.get('OLLAMA_NUM_CTX', '12288'))
         max_tokens = int(os.environ.get('OLLAMA_MAX_TOKENS', '3000'))
         timeout = int(os.environ.get('OLLAMA_TIMEOUT_SEC', '300'))
@@ -244,8 +243,8 @@ def _propose_mlx(prompt, model):
 def _release_ollama(model):
     """Unload local model weights while leaving the Ollama server running.
 
-    This is important on machines with unified memory: the recommender's
-    multi-seed evaluation runs in the same memory pool as the local LLM.
+    This prevents the local LLM and multi-seed recommender evaluation from
+    competing for accelerator memory.
     Ollama treats an empty generate request with keep_alive=0 as an unload.
     Releasing is best-effort; a later proposal call will load the model again.
     """
@@ -264,7 +263,7 @@ def _release_ollama(model):
 
     # The unload endpoint returns before memory is necessarily free. Poll the
     # local process list so a following NumPy/FM job cannot start while Ollama
-    # still owns most of a laptop's unified memory.
+    # still owns most of the available accelerator memory.
     deadline = time.monotonic() + 60
     target_name = model.split(':', 1)[0]
     while time.monotonic() < deadline:

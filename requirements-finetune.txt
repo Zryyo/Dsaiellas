@@ -1,4 +1,4 @@
-# Gemma 4 LoRA/QLoRA training on Apple silicon.
+# Optional Gemma 4 LoRA/QLoRA training dependencies.
 # Kept separate from the benchmark harness dependencies because this stack is
 # only needed when building or serving a fine-tuned local agent.
 mlx-vlm[train]>=0.5.0
